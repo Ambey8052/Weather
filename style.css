@@ -1,50 +1,82 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.5s, color 0.3s;
   background: linear-gradient(to right, #74ebd5, #9face6);
   color: #333;
-  margin: 0;
-  padding: 0;
-  text-align: center;
 }
 
 .container {
-  padding: 30px;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  margin-top: 100px;
+  background: #ffffffc0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 input {
   padding: 10px;
-  width: 70%;
-  margin: 10px 0;
+  width: 60%;
+  margin-bottom: 10px;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
+  padding: 10px;
+  margin: 5px;
   cursor: pointer;
-  border-radius: 5px;
+  border: none;
+  background: #3498db;
+  color: white;
+  border-radius: 8px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background: #2980b9;
+}
+
+.weather-box {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.forecast-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.forecast-day {
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100px;
 }
 
 .hidden {
   display: none;
 }
 
-#error {
-  color: red;
-  margin-top: 10px;
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
 }
 
-#weatherResult img {
-  width: 80px;
+body.dark .container {
+  background: #1e1e1e;
+  box-shadow: none;
+}
+
+#recentSearches button {
+  margin: 3px;
+  background-color: #2ecc71;
+}
+
+#recentSearches button:hover {
+  background-color: #27ae60;
 }

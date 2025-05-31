@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather Forecast</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Weather Forecast</h1>
+    <h1>🌦️ Weather App</h1>
+    
     <input type="text" id="cityInput" placeholder="Enter city name" />
     <button onclick="getWeather()">Get Weather</button>
+    <button onclick="getLocationWeather()">Get Current Location Weather</button>
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
 
-    <div id="weatherResult" class="hidden">
-      <h2 id="cityName"></h2>
-      <img id="icon" />
-      <p id="description"></p>
-      <p id="temp"></p>
-      <p id="humidity"></p>
-      <p id="wind"></p>
+    <div id="weatherResult" class="weather-box hidden"></div>
+
+    <div id="forecast" class="hidden">
+      <h3>5-Day Forecast</h3>
+      <div id="forecastCards" class="forecast-container"></div>
     </div>
 
-    <p id="error" class="error"></p>
+    <div id="recentSearches"></div>
   </div>
 
   <script src="script.js"></script>
